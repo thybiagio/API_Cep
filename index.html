@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="block">
+        <h1>Consulta de CEP</h1>
+        <div class="form-group">
+            <label for="cep-input">Digite o CEP desejado:</label>
+            <input type="text" id="cep-input" placeholder="00000-000">
+            <button id="search-button">Consultar</button>
+        </div>
+        <div id="address-info" class="hidden">
+            <h2>Endereço</h2>
+            <p><strong>Rua:</strong> <span id="logradouro"></span></p>
+            <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+            <p><strong>Cidade:</strong> <span id="localidade"></span></p>
+            <p><strong>Estado:</strong> <span id="uf"></span></p>
+            <button id="save-button">Salvar Endereço</button>
+        </div>
+        <div id="saved-addresses">
+            <h2>Endereços Salvos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>CEP</th>
+                        <th>Rua</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="address-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
